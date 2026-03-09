@@ -222,27 +222,29 @@ alvos_long <- resultado_blocos %>%
 # 6) Checagens exploratórias
 # ============================================================
 
+# Extração para checagem de alvos por Grupo
+# Fauna
 alvos_fauna <- alvos_long |>
   filter(Tipo == "Fauna") |>
   pull(Conteudo) |>
   unique() |>
   sort()
 alvos_fauna
-
+# Flora
 alvos_flora <- alvos_long |>
   filter(Tipo == "Flora") |>
   pull(Conteudo) |>
   unique() |>
   sort()
 alvos_flora
-
+# Ambientes Singulares
 alvos_ambientes <- alvos_long |>
   filter(Tipo == "Ambientes") |>
   pull(Conteudo) |>
   unique() |>
   sort()
 alvos_ambientes
-
+# Fitofisionomias
 alvos_fitofisionomias <- alvos_long |>
   filter(Tipo == "Fitofisionomias") |>
   pull(Conteudo) |>
